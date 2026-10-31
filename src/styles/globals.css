@@ -1,5 +1,124 @@
-*{
-    padding: 0;
-    margin: 0;
-    color: black;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px clamp(16px, 4vw, 48px);
+  background: #0b1120;
+  color: #e2e8f0;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+}
+
+#__next {
+  display: contents;
+}
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+h1 {
+  font-size: 1.75rem;
+}
+
+header p,
+.resumo,
+footer {
+  color: #94a3b8;
+  font-size: 0.95rem;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.85rem;
+  color: #94a3b8;
+}
+
+input {
+  width: 160px;
+  padding: 8px 10px;
+  border: 1px solid #334155;
+  border-radius: 6px;
+  background: #111a2e;
+  color: #e2e8f0;
+  font-size: 1rem;
+}
+
+.status {
+  display: inline-block;
+  margin-right: 10px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: #334155;
+  color: #e2e8f0;
+  font-size: 0.8rem;
+}
+
+.status.ativo {
+  background: #166534;
+}
+
+main {
+  flex: 1;
+}
+
+.grafico {
+  display: block;
+  width: 100%;
+  height: auto;
+  /* Quadrado do tamanho da largura, limitado pela altura da tela (o SVG centraliza o círculo) */
+  max-height: max(320px, calc(100vh - 200px));
+}
+
+.grafico circle {
+  fill-opacity: 0.8;
+  stroke-width: 2;
+  transition: fill-opacity 0.15s;
+}
+
+.grafico circle.alta {
+  fill: #15803d;
+  stroke: #4ade80;
+}
+
+.grafico circle.baixa {
+  fill: #b91c1c;
+  stroke: #f87171;
+}
+
+.grafico a:hover circle {
+  fill-opacity: 1;
+}
+
+.grafico text {
+  fill: #fff;
+  font-weight: 600;
+  pointer-events: none;
+}
+
+.grafico .percentual {
+  font-weight: 400;
+  fill-opacity: 0.85;
+}
+
+.vazio {
+  padding: 64px 0;
+  text-align: center;
+  color: #94a3b8;
+}
+
+footer a {
+  color: #60a5fa;
 }

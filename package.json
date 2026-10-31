@@ -1,19 +1,20 @@
 {
-  "name": "crypto_bubbles",
-  "version": "0.1.0",
+  "name": "crypto-bubbles-br",
+  "version": "1.0.0",
   "private": true,
+  "description": "Bolhas com a variação de 24 h das criptomoedas em tempo real, via WebSocket da Binance",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "test": "vitest run"
   },
   "dependencies": {
-    "eslint": "8.36.0",
-    "eslint-config-next": "13.2.4",
-    "next": "13.2.4",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "websocket": "^1.0.34"
+    "d3-hierarchy": "3.1.2",
+    "next": "16.4.2",
+    "react": "19.3.1",
+    "react-dom": "19.3.1"
+  },
+  "devDependencies": {
+    "vitest": "5.0.5"
   }
 }
